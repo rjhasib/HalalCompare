@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Takaful — Riba-Free Compare</title>
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="./index.html">
+        <div class="logo">RF</div>
+        <span>Riba-Free Compare</span>
+      </a>
+      <div class="links">
+        <a class="link" href="./banks.html">Banks</a>
+        <a class="link active" href="./takaful.html">Takaful</a>
+        <a class="link" href="./microfinance.html">Microfinance</a>
+        <a class="link" href="./admin.html">Admin</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <h1 class="h1">Takaful (Islamic insurance)</h1>
+      <p class="p">List and compare takaful operators (sample data included — replace with your own).</p>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <div style="font-weight:900">Takaful institutions</div>
+      <div class="small">Pulled from <span class="kbd">data/products.json</span> → institutions</div>
+      <div class="grid cols-2" id="cards" style="margin-top:12px"></div>
+    </div>
+
+    <div class="footer">
+      Data is editable via <span class="kbd">Admin</span> → export <span class="kbd">products.json</span> → replace <span class="kbd">/data/products.json</span> → ZIP + redeploy on Netlify.
+    </div>
+  </div>
+
+  <script type="module" src="./js/takaful.js"></script>
+</body>
+</html>

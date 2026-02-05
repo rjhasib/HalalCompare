@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Banks — Riba-Free Compare</title>
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="./index.html">
+        <div class="logo">RF</div>
+        <span>Riba-Free Compare</span>
+      </a>
+      <div class="links">
+        <a class="link active" href="./banks.html">Banks</a>
+        <a class="link" href="./takaful.html">Takaful</a>
+        <a class="link" href="./microfinance.html">Microfinance</a>
+        <a class="link" href="./admin.html">Admin</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <h1 class="h1">Banks & participation banks</h1>
+      <p class="p">Browse institutions and their Shariah model (full-fledged vs Islamic window).</p>
+      <div class="row" style="margin-top:12px">
+        <div style="min-width:220px">
+          <div class="small">Country</div>
+          <select id="country" class="input">
+            <option value="bd">Bangladesh</option>
+            <option value="tr">Turkey</option>
+          </select>
+        </div>
+        <div style="flex:1; min-width:240px">
+          <div class="small">Search</div>
+          <input id="q" class="input" placeholder="Search institution name…" />
+        </div>
+      </div>
+    </div>
+
+    <div class="grid cols-2" id="cards" style="margin-top:14px"></div>
+
+    <div class="footer">
+      Data is editable via <span class="kbd">Admin</span> → export <span class="kbd">products.json</span> → replace <span class="kbd">/data/products.json</span> → ZIP + redeploy on Netlify.
+    </div>
+  </div>
+
+  <script type="module" src="./js/banks.js"></script>
+</body>
+</html>

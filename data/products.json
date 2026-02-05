@@ -1,0 +1,88 @@
+{
+  "institutions": [
+    {
+      "institution_id": "inst_ibbl",
+      "name": "Islami Bank Bangladesh Ltd.",
+      "institution_type": "islamic_bank",
+      "islamic_model": "full_fledged",
+      "country": "bd",
+      "website_url": "https://www.islamibankbd.com"
+    },
+    {
+      "institution_id": "inst_kuveyt",
+      "name": "Kuveyt Türk Katılım Bankası",
+      "institution_type": "islamic_bank",
+      "islamic_model": "full_fledged",
+      "country": "tr",
+      "website_url": "https://www.kuveytturk.com.tr"
+    },
+    {
+      "institution_id": "inst_islamic_window",
+      "name": "Example Conventional Bank (Islamic Window)",
+      "institution_type": "conventional_bank",
+      "islamic_model": "islamic_window",
+      "country": "bd",
+      "website_url": ""
+    },
+    {
+      "institution_id": "inst_takaful",
+      "name": "Example Takaful Operator",
+      "institution_type": "takaful",
+      "islamic_model": "full_fledged",
+      "country": "bd",
+      "website_url": ""
+    }
+  ],
+  "products": [
+    {
+      "product_id": "prd_sme_murabaha_bd",
+      "institution_id": "inst_ibbl",
+      "product_name": "SME Murabaha Finance",
+      "product_category": "sme_finance",
+      "target_segment": "sme",
+      "contract_type": "murabaha",
+      "agent_banking_supported": true,
+      "collateral_required": true,
+      "financing_min_bdt": 500000,
+      "financing_max_bdt": 5000000,
+      "profit_rate_type": "indicative",
+      "profit_rate_note": "Varies by risk and tenure.",
+      "shariah_clarity_score": 4,
+      "transparency_score": 3,
+      "accessibility_score": 3,
+      "fairness_score": 4,
+      "summary": "Working capital purchase finance with disclosed cost and profit margin.",
+      "sources": [
+        {
+          "label": "Product page",
+          "url": "https://www.islamibankbd.com"
+        }
+      ]
+    },
+    {
+      "product_id": "prd_home_ijara_tr",
+      "institution_id": "inst_kuveyt",
+      "product_name": "Home Finance (Ijara/Murabaha mix)",
+      "product_category": "home_finance",
+      "target_segment": "individual",
+      "contract_type": "ijara",
+      "agent_banking_supported": false,
+      "collateral_required": true,
+      "financing_min_bdt": null,
+      "financing_max_bdt": null,
+      "profit_rate_type": "variable",
+      "profit_rate_note": "See bank calculator; rates vary.",
+      "shariah_clarity_score": 4,
+      "transparency_score": 4,
+      "accessibility_score": 3,
+      "fairness_score": 4,
+      "summary": "Participation-bank home finance structured via Shariah-compliant contracts.",
+      "sources": [
+        {
+          "label": "Bank website",
+          "url": "https://www.kuveytturk.com.tr"
+        }
+      ]
+    }
+  ]
+}
