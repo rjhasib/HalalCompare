@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Riba-Free Compare — Islamic Finance Comparison</title>
+  <link rel="stylesheet" href="./css/main.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="./index.html">
+        <div class="logo">RF</div>
+        <span>Riba-Free Compare</span>
+      </a>
+      <div class="links">
+        <a class="link" href="./banks.html">Banks</a>
+        <a class="link" href="./takaful.html">Takaful</a>
+        <a class="link" href="./microfinance.html">Microfinance</a>
+        <a class="link" href="./admin.html">Admin</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="row" style="justify-content:space-between">
+        <div>
+          <h1 class="h1">Compare riba-free financial products</h1>
+          <p class="p">A lightweight NerdWallet-style comparison site for Islamic banks, takaful and microfinance. Works with Netlify drag-and-drop hosting.</p>
+        </div>
+        <div class="badge">Static • Fast • No backend</div>
+      </div>
+
+      <div class="row" style="margin-top:12px">
+        <div style="flex:1; min-width:220px">
+          <div class="small">Country</div>
+          <select id="country" class="input">
+            <option value="bd">Bangladesh</option>
+            <option value="tr">Turkey</option>
+          </select>
+        </div>
+        <div style="flex:2; min-width:240px">
+          <div class="small">Search</div>
+          <input id="q" class="input" placeholder="e.g., SME, murabaha, home finance…" />
+        </div>
+        <div style="min-width:160px">
+          <div class="small">Category</div>
+          <select id="cat" class="input">
+            <option value="all">All</option>
+            <option value="savings">Savings</option>
+            <option value="sme_finance">SME finance</option>
+            <option value="home_finance">Home finance</option>
+            <option value="agent_banking">Agent banking</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <div class="row" style="justify-content:space-between">
+        <div>
+          <div style="font-weight:900">Top matches</div>
+          <div class="small">Sorted by average score (clarity, transparency, access, fairness)</div>
+        </div>
+        <div class="row">
+          <span class="badge">Scores: 1–5</span>
+        </div>
+      </div>
+
+      <div style="overflow:auto; margin-top:10px">
+        <table class="table" id="results">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Institution</th>
+              <th>Contract</th>
+              <th>Min/Max</th>
+              <th>Scores</th>
+              <th>Sources</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="small" id="status" style="margin-top:10px"></div>
+    </div>
+
+    <div class="footer">
+      Data is editable via <span class="kbd">Admin</span> → export <span class="kbd">products.json</span> → replace <span class="kbd">/data/products.json</span> → ZIP + redeploy on Netlify.
+    </div>
+  </div>
+
+  <script type="module" src="./js/home.js"></script>
+</body>
+</html>

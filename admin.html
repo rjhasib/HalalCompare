@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin — Riba-Free Compare</title>
+  <link rel="stylesheet" href="./css/main.css" />
+  <meta name="robots" content="noindex" />
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="./index.html">
+        <div class="logo">RF</div>
+        <span>Riba-Free Compare</span>
+      </a>
+      <div class="links">
+        <a class="link" href="./banks.html">Banks</a>
+        <a class="link" href="./takaful.html">Takaful</a>
+        <a class="link" href="./microfinance.html">Microfinance</a>
+        <a class="link active" href="./admin.html">Admin</a>
+      </div>
+    </div>
+
+    <div class="hero">
+      <h1 class="h1">Admin (no backend)</h1>
+      <p class="p">Edit data in your browser → export <span class="kbd">products.json</span> → replace file in ZIP → redeploy on Netlify.</p>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <div style="font-weight:900; margin-bottom:8px">Unlock editing</div>
+      <div class="row">
+        <input id="pass" class="input" type="password" placeholder="Password (default: change-me)" style="max-width:280px" />
+        <button id="unlock" class="btn primary">Unlock</button>
+        <span class="small">Tip: change password in <span class="kbd">js/admin.js</span></span>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <div class="row" style="justify-content:space-between">
+        <div>
+          <div style="font-weight:900">Data actions</div>
+          <div class="small">Import/export your <span class="kbd">data/products.json</span></div>
+        </div>
+        <div class="row">
+          <label class="btn" style="cursor:pointer">
+            Import JSON
+            <input id="file" type="file" accept="application/json" style="display:none" />
+          </label>
+          <button id="export" class="btn primary" disabled>Export products.json</button>
+        </div>
+      </div>
+      <div class="small" id="val" style="margin-top:10px"></div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <div class="row" style="justify-content:space-between">
+        <div>
+          <div style="font-weight:900">Institutions</div>
+          <div class="small">Banks / Islamic windows / MFIs / takaful</div>
+        </div>
+        <button id="addInst" class="btn primary" disabled>+ Add institution</button>
+      </div>
+      <hr />
+      <div id="institutions" class="grid"></div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <div class="row" style="justify-content:space-between">
+        <div>
+          <div style="font-weight:900">Products</div>
+          <div class="small">Add/edit products + scores + sources</div>
+        </div>
+        <button id="addProd" class="btn primary" disabled>+ Add product</button>
+      </div>
+      <hr />
+      <div id="products" class="grid"></div>
+    </div>
+
+    <div class="footer">
+      Data is editable via <span class="kbd">Admin</span> → export <span class="kbd">products.json</span> → replace <span class="kbd">/data/products.json</span> → ZIP + redeploy on Netlify.
+    </div>
+  </div>
+
+  <script type="module" src="./js/admin.js"></script>
+</body>
+</html>
